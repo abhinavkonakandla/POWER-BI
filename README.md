@@ -11,12 +11,13 @@
 
 It adds the calculated columns to the given table or table expression.
 
-**syntax**    ->ADDCOLUMNS(<TABLE>,<>NAME>,<EXPRESSION>,[<NAME>,<EXPRESSION>]...)
+**syntax** ->ADDCOLUMNS(<TABLE>,<>NAME>,<EXPRESSION>,[<NAME>,<EXPRESSION>]...)
 - table->it returns a table.
 
 - name->the name specifies the column.
 
 - expression->Dax expression that needs to perform on each row.
+
 return value
 
 - a table it's original columns with added columns.
