@@ -212,6 +212,192 @@ Here are some related projects
 
 
 
+
+
+**FILTER FUNCTIONS**
+
+**ALL**
+
+It returns all the rows in a table or all the values in a column. basically it removes filters for complete table or given column. used when we want to apply filters on complete table we use this function.
+
+**syntax** -> ALL(<TABLE> | <COLUMN>).
+
+The argument of the above syntax should not be an expression.
+
+return type
+
+returns a table or column with filters removed.
+
+**ALLEXCEPT**
+
+It removes all filters except for mentioned columns.
+
+**syntax** ->ALLEXCEPT(<TABLE>,<COLUMN>).
+
+return value
+
+a table with all filters removed except for the filters on the specified columns.
+
+Note:
+
+1. we can use ALLEXCEPT function when we want to remove all filters on all rows except one or two then ALLEXCEPT can be used.
+
+**ALLNONBLANKROW**
+
+It returns a table or column that all filters ae removed along with blank rows.
+
+**syntax**-> ALLNONBLANKROW(<TABLE> | <COLUMN>).
+
+return value
+
+it returns a table by removing any filters on it and empty rows are also removed.
+
+Note:
+
+1. The main difference between ALL and ALLNONBLANKROW is 
+
+        ALL -->  It removes all filters on a table or column that you specify.
+
+        ALLNONBLANKROW --> it removes all filters along with blank-rows.
+
+**CALCULATE**
+
+It is used to evaluate an expression by applying filters.
+
+**syntax** -> CALCULATE(<EXPRESSION>,<FILTER>).
+
+return value
+
+result of that expression.
+
+
+**CALCULATETABLE**
+
+It evaluates a table expression by applying some filters.
+
+**syntax**-> CALCULATETABLE(<EXPRESSION>,<FILTER>).
+
+return value
+
+a table of values.
+
+**DISTINCT**
+
+It gives a column of unique values.
+
+**syntax**-> DISTINCT(<COLUMN>).
+
+return value
+
+a single column table with unique values..
+
+**EARLIER**
+
+returns the current value of the column in an outer evaluation passes.
+
+**syntax** -> EARLIER(<COLUMN>,<NUMBER>).
+
+return value
+
+It returns the current row value from the given column at number of outer evaluation passes.
+
+Note:
+1. EARLIER is used for nested calculations.
+
+2. here, it stores a value in a variable to make calculation with other values.
+
+**FILTER**
+
+It returns a table based on the filters.
+
+**syntax**-> FILTER(<TABLE>,<EXPRESSION>).
+
+return value
+
+a table containing filtered rows.
+
+Note:
+
+1. FILTER function is used to reduce number of rows working with and use only specific data in 
+calculations.
+
+2. DAX FILTER is not independent function.(table is giving as an argument).
+
+**FILTERS**
+
+It returns the values directly applied to the column
+(In simple words it shows how many filters are applied to a column)
+
+**syntax**-> FILTERS(<COLUMNNAME>).
+
+return value
+
+the values that are directly applied as filters to column name.
+
+**HASONEFILTER**
+
+returns true if there are one and only direct filters on a column otherwise it returns false.
+
+**syntax**-> HASONEFILTER(<COLUMNNAME>).
+
+return value
+
+TRUE (or) FALSE.
+
+**HASONEVALUE**
+
+Returns TRUE when the context for columnName has been filtered down to one distinct value only. Otherwise, returns FALSE.
+
+**syntax**->HASONEVALUE(<COLUMNNAME>).
+
+return value
+
+TRUE (or) FALSE.
+
+**ISCROSSFILTERED**
+
+returns true when column name or another column in same or related table being filtered.
+
+**syntax**->ISCROSSFILTERED(<COLUMNNAME>).
+
+return value
+
+TRUE (or) FALSE.
+
+Note:
+1. A column column name is said to be cross-filtered when a filter applied to another column in the same table or related table affects the column name by filtering it.
+
+**ISFILTERED**
+returns true when column name is directly filtered. 
+
+If there is no filter on the column or if the filtering happens because a different column in the same table or in a related table is being filtered, then the DAX ISFILTERED function returns FALSE.
+
+**syntax**->ISFILTERED(<COLUMNNAME>).
+
+return value
+
+TRUE (or) FALSE.
+
+**KEEPFILTERS**
+it allows to maintain existing filters on a column or table while additional filters in your calculations.
+
+**syntax**-> KEEPFILTERS(<EXPRESSION>).
+
+return value
+
+NO RETURN VALUE
+
+Note:
+
+1. KEEPFILTERS IS MOSTLY USED IN CALCULATE AND CALCULATETABLE functions to modify the filters.
+
+
+
+
+
+
+//FILTERS FUNCTIONS COMPLETED
+
 ## References
 
 
@@ -229,7 +415,9 @@ Here are some related projects
 - [ISCROSSFILTERED](https://www.tutorialspoint.com/dax_functions/dax_iscrossfiltered_function.htm)
 - [ISFILTERED](https://www.tutorialspoint.com/dax_functions/dax_isfiltered_function.htm)
 - [KEEPFILTERS](https://www.tutorialspoint.com/dax_functions/dax_keepfilters_function.htm)
+
 //filter functions also completed 
+
 
 
 
