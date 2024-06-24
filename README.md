@@ -211,23 +211,7 @@ Here are some related projects
 - [SUMX](https://www.tutorialspoint.com/dax_functions/dax_sumx_function.htm)
 
 
-## References
-
-
--[ALL](https://www.tutorialspoint.com/dax_functions/dax_all_function.htm)
--[ALLEXCEPT](https://www.tutorialspoint.com/dax_functions/dax_allexcept_function.htm)
--[ALLNONBLANKROW](https://www.tutorialspoint.com/dax_functions/dax_allnoblankrow_function.htm)
--[CALCULATE](https://www.tutorialspoint.com/dax_functions/dax_calculate_function.htm)
--[CALCULATETABLE](https://www.tutorialspoint.com/dax_functions/dax_calculatetable_function.htm)
--[DISTINCT](https://www.tutorialspoint.com/dax_functions/dax_distinct_function.htm)
--[EARLIER](https://www.tutorialspoint.com/dax_functions/dax_earlier_function.htm)
--[FILTER](https://www.tutorialspoint.com/dax_functions/dax_filter_function.htm)
--[FILTERS](https://www.tutorialspoint.com/dax_functions/dax_filters_function.htm)
--[HASONEFILTER](https://www.tutorialspoint.com/dax_functions/dax_hasonefilter_function.htm)
--[HASONEVALUE](https://www.tutorialspoint.com/dax_functions/dax_hasonevalue_function.htm)
--[ISCROSSFILTERED](https://www.tutorialspoint.com/dax_functions/dax_iscrossfiltered_function.htm)
--[ISFILTERED](https://www.tutorialspoint.com/dax_functions/dax_isfiltered_function.htm)
--[KEEPFILTERS](https://www.tutorialspoint.com/dax_functions/dax_keepfilters_function.htm)
+//filter functions also completed 
 
 
 
