@@ -210,7 +210,6 @@ Here are some related projects
 - [SUM](https://www.tutorialspoint.com/dax_functions/dax_sum_function.htm)
 - [SUMX](https://www.tutorialspoint.com/dax_functions/dax_sumx_function.htm)
 
-
 //filter functions also completed 
 
 
