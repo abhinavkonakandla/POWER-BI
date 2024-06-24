@@ -398,7 +398,7 @@ Note:
 
 //FILTERS FUNCTIONS COMPLETED
 
-<<<<<<< HEAD
+
 
 **FILTER FUNCTIONS**
 
@@ -583,7 +583,7 @@ Note:
 
 
 //FILTERS FUNCTIONS COMPLETED
-=======
+
 ## References
 
 
@@ -610,4 +610,4 @@ Note:
 
 
 
->>>>>>> master1
+
