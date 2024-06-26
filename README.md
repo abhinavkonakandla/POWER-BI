@@ -604,7 +604,382 @@ Note:
 
 //filter functions also completed 
 
+## DAX TIME INTELLIGENCE FUNCTIONS
+## DATESBETWEEN
 
+Returns the table that contains a column of dates that begins from start_date until the end_date.
+
+**syntax**-> DATESBETWEEN(<DATES>,<START_DATE>,<END_DATE>).
+
+return value
+
+A column of dates.
+
+Note:
+
+1. if any parameter is empty that handles the following
+
+      -> if start_date is empty it takes the earliest value.
+
+      -> if end_date is empty it t takes the latest value.
+
+      -> both start_date and end_date are inclusive(both s_date and e_date included in the output).
+
+
+## DATESINPERIOD
+
+returns a table that contains a single column of dates that begins with start_date and continues for the specified intervals.
+
+**syntax**-> DATESINPERIOD(<DATES>,<START_DATE>,<NUMBER_OF_INTERVALS>,<INTERVAL>)
+
+         INTERVAL can be any of the following
+
+              ->DAY
+
+              ->MONTH
+
+              ->QUARTER
+
+              ->YEAR
+
+return value
+
+a column of dates
+
+Note:
+
+The dates parameter can be any of the following −
+
+1. A reference to a date/time column.
+
+2. A table expression that returns a single column of date/time values.
+
+3. A Boolean expression that defines a single-column table of date/time values.
+
+->If the value of number of intervals is positive the dates move forward otherwise backward.
+
+->The interval value should be a single value and it need to be in quotation marks.
+
+
+## DATESMTD
+
+It returns a single column table from the start of the moth to current date in the context.
+
+**syntax**->DATESMTD(<DATES>)
+
+return value
+
+a single column of dates.
+
+
+## DATESQTD
+
+It returns a single column table from the start of the quarter to current date in the context.
+
+**syntax**->DATESQTD(<DATES>)
+
+return value
+
+a single column of dates.
+
+Eg: If today's date is May 20, 2023, the DATESQTD function will return the dates from April 1, 2023, to May 20, 2023.
+
+
+## DATESYTD
+
+It returns a single column table from the start of the year to current date in the context.
+
+**syntax**->DATESYTD(<DATES>,[<YEAR_END_DATE>]->optional).
+
+return value
+
+a single column of dates.
+
+eg:If today's date is May 1, 2023, the DATESYTD function will return the dates from January 1, 2023, to May 1, 2023.
+
+
+## ENDOFMONTH
+
+It returns the last date of month in the current context for the specified column of dates.
+
+syntax-> ENDOFMONTH(<DATES>).
+
+return value
+
+a table containing single value with single column and single row.
+
+
+## ENDOFQUARTER
+
+It returns the last date of quarter in the current context for the specified column of dates.
+
+**syntax**-> ENDOFYEAR(<DATES>).
+
+return value
+
+a table containing single value with single column and single row.
+
+## ENDOFYEAR
+
+It returns the last date of year in the current context for the specified column of dates.
+
+**syntax**-> ENDOFYEAR(<DATES>,[<YEAR_END_VALUE>]).
+
+  ->second parameter is optional.
+
+return value
+
+a table containing single value with single column and single row.
+
+
+## FIRSTDATE
+
+It returns first date from the given table in the current context.
+
+**syntax**->FIRSTDATE(<DATES>).
+
+return value
+
+it returns a table containing a single value.
+
+Note:
+
+1. when table has single date it becomes the both firstdate and lastdate.
+
+
+## FIRSTNONBLANK
+
+it results in first non-blank value from the given column.
+
+**syntax**->FIRSTNONBLANK(<COLUMN>,<EXPRESSION>).
+
+return value
+
+a table containing single value with single column and single row with the first computed non-blank value.
+
+
+## LASTDATE
+
+It returns last date from the given table in the current context.
+
+**syntax**->LASTDATE(<DATES>).
+
+return value
+
+it returns a table containing a single value.
+
+Note:
+
+    -> when table has single date it becomes the both firstdate and lastdate.
+
+
+## LASTNONBLANK
+
+it results in last non-blank value from the given column.
+
+**syntax**->LASTNONBLANK(<COLUMN>,<EXPRESSION>).
+
+return value
+
+a table containing single value with single column and single row with the first computed non-blank value.
+
+
+## NEXTDAY
+
+it returns a table containing all dates from the next day based on the first date specified in the dates column.
+
+**syntax**->NEXTDAY(<DATES>).
+
+return value
+
+a table contains single column of values.
+
+
+## NEXTMONTH
+
+It returns the table that contains the a column of values from the next month.
+
+**syntax**->NEXTMONTH(<DATES>).
+
+return value
+
+a table contains single column of dates.
+
+
+## NEXTQUARTER
+
+Returns a table that contains a column of all dates in the next quarter.
+
+**syntax**->NEXTQUARTER(<DATES>).
+
+return value
+
+a table contains single column of dates.
+
+
+## NEXTYEAR
+
+Returns a table that contains a column of all dates in the next year, based on the first date in the dates column, in the current context.
+
+**syntax**->NEXTYEAR(<DATES>,[<YEAR_END_DATE>]).
+
+return value
+
+a table contains single column of dates.
+
+## OPENINGBALANCEMONTH
+
+Evaluates the expression from the start of the data until the start of the month.
+
+**syntax**->OPENINGBALANCEMONTH(<EXPRESSION>,<DATES>,[<FILTER>]).
+
+return value
+
+a scalar value
+
+->The filter parameter can be a Boolean expression or a table expression that defines a filter.
+
+## OPENINGBALANCEQUARTER
+
+Evaluates the expression from the start of the data until the start of the quarter.
+
+**syntax**->OPENINGBALANCEQUARTER(<EXPRESSION>,<DATES>,[<FILTER>]).
+
+return value
+
+a scalar value
+
+->The filter parameter can be a Boolean expression or a table expression that defines a filter.
+
+## OPENINGBALANCEYEAR
+
+Evaluates the expression from the start of the data until the start of the year.
+
+**syntax**->OPENINGBALANCEYEAR(<EXPRESSION>,<DATES>,[<FILTER>],[year_end_date]).
+
+return value
+
+a scalar value
+
+->The filter parameter can be a Boolean expression or a table expression that defines a filter.
+
+## PREVIOUSDAY
+
+Returns the a column of dates representing the day that is previous to the first date in the dates column based on the first date in the dates.
+
+**syntax**->PREVIOUSDAY(<DATES>).
+
+return value
+
+a table containing single column of values.
+
+## PREVIOUSMONTH
+
+Returns the a column of dates representing the day that is previous to the first date in the dates column based on the first date in the dates.
+
+**syntax**->PREVIOUSMONTH(<DATES>).
+
+return value
+
+a table containing single column of values.
+
+## PREVIOUSQUARTER
+
+Returns a table that contains a column of all dates from the previous quarter, based on the first date in the dates column, in the current context.
+
+**syntax**->PREVIOUSQUARTER(<DATES>).
+
+return value
+
+a table containing single column of values.
+
+## PREVIOUSYEAR
+
+Returns a table that contains a column of all dates from the previous year, given the last date in the dates column, in the current context.
+
+**syntax**->PREVIOUSYEAR(<DATES>,[year_end_date]).
+
+return value
+
+a column containing single column of values.
+
+## SAMEPERIODLASTYEAR
+
+returns a table that contains a column of dates shifted back to one year.
+
+**syntax**->SAMEPERIODLASTYEAR(<DATES>).
+
+return value
+
+a table contains single column of values.
+
+## STARTOFMONTH
+
+Returns the first date of the month in the current context for the specified column of dates.
+
+**syntax**->STARTOFMONTH(<DATES>).
+
+return value
+
+a table containing single column and single row with a date value.
+
+
+## STARTOFQUARTER
+
+Returns the first date of the quarter in the current context for the specified column of dates.
+
+**syntax**->STARTOFQUARTER(<DATES>).
+
+return value
+
+a table containing single column and single row with a date value.
+
+## STARTOFYEAR
+
+Returns the first date of the year in the current context for the specified column of dates.
+
+**syntax**->STARTOFYEAR(<DATES>,[year_end_date]).
+
+return value
+
+a table containing single column and single row with a date value.
+---
+
+## TOTALMTD
+
+Evaluates the expression from the start of the month to current date.
+
+**syntax**->TOTALMTD(<EXPRESSION>,<DATES>,[<FILTER>]).
+
+return value
+
+a scalar value.
+
+---
+
+## TOTALQTD
+
+Evaluates the expression from the start of the quarter to current date.
+
+**syntax**->TOTALQTD(<EXPRESSION>,<DATES>,[<FILTER>]).
+
+return value
+
+a scalar value.
+
+---
+
+## TOTALYTD
+
+Evaluates the expression from the start of the year to current date.
+
+**syntax**->TOTALYTD(<EXPRESSION>,<DATES>,[<FILTER>]).
+
+return value
+
+a scalar value.
+
+// Time intelligence functions are completed.
 
 
 
